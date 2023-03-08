@@ -32,7 +32,7 @@
 }
 
 .nav-list a:hover {
-    color: #66E8FC;;
+    color: #66E8FC;
 }
 
 .nav-list a::after {
@@ -40,8 +40,8 @@
     content: "";
     height: 0.1em;
     display: block;
-    transition: width 0.5s ease;
     background-color: #f55a8d;
+    transition: width 0.5s ease;
 }
 
 .nav-list a:hover::after {
@@ -53,8 +53,8 @@
 }
 
 .nav-btn {
-    font-weight: 500;
     color: #ffffff;
+    font-weight: 500;
     font-size: 0.9rem;
     padding: 0.6em 1.6em;
     text-decoration: none;
@@ -65,11 +65,16 @@
     padding: 0.4em 1.4em;
 }
 
+.fa.fa-bars {
+    display: none;
+}
+
 /* ------------------------------------------------------------ */
 /* --------------------SASS-Section---------------------------- */
 /* ------------------------------------------------------------ */
 
 .sass {
+    gap: 2em;
     padding: 4em;
     display: flex;
     background-color: #6126B6;
@@ -89,15 +94,15 @@
 }
 
 .sass-left h1 {
-    font-size: 4.2rem;
-    font-weight: 600;
     color: #ffffff;
+    font-weight: 600;
+    font-size: 4.2rem;
 }
 
 .sass-left p {
+    color: #ffffff;
     line-height: 1;
     font-size: 1rem;
-    color: #ffffff;
 }
 
 /* ------------------------------------------------------------ */
@@ -105,6 +110,7 @@
 /* ------------------------------------------------------------ */
 
 .sass-system {
+    gap: 2em;
     display: flex;
     padding: 8em 4em;
     align-items: center;
@@ -147,13 +153,13 @@
 }
 
 .orange {
-    font-size: 1.2em;
     color: #ffa500;
+    font-size: 1.2em;
 }
 
 .green {
-    font-size: 1.2em;
     color: #008000;
+    font-size: 1.2em;
 }
 
 .blue {
@@ -166,6 +172,8 @@
 /* ------------------------------------------------------------ */
 
 .footer-heading h3 {
+    width: 60vw;
+    margin: 0 auto;
     font-size: 2.5rem;
     text-align: center;
 }
@@ -173,6 +181,7 @@
 .cards {
     gap: 3em;
     display: flex;
+    padding: 0.5em;
     padding-block: 5em;
     align-items: center;
     justify-content: center;
@@ -238,6 +247,78 @@
 .card:hover .card-containt {
     color: #ffffff;
     background-color: #6126B6;
+}
+
+/* ------------------------------------------------------------ */
+/* ---------------------Media-Query---------------------------- */
+/* ------------------------------------------------------------ */
+
+@media screen and (max-width: 1400px) {
+    .sass {
+        text-align: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    .sass-left {
+        width: 100%;
+    }
+
+    .sass-system {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1025px) {
+    .cards {
+        flex-wrap: wrap;
+    }
+
+    .nav-list , .btn-container {
+        display: none;
+    }
+
+    .fa.fa-bars {
+        font-size: 3rem;
+        display: initial;
+    }
+
+    .nav-container {
+        padding-inline: 1.5em;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .sass-img , .sass-system-img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 494px)  {
+    .sass-left h1 {
+        font-size: 12vw;
+    }
+    .sass-system {
+        padding-top: 2em;
+    }
+
+    .sass-system-right h3 {
+        font-size: 8vw;
+        text-align: center;
+    }
+
+    .list-items li h4 {
+        font-size: 5vw;
+    }
+    
+    .list-items li:nth-child(even)  {
+        font-size: 3vw;
+    }
+
+    .footer-heading h3 {
+        font-size: 8vw;
+    }
 }
 
 /* ------------------------------------------------------------ */
